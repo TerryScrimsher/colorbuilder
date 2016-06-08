@@ -1,0 +1,126 @@
+body {padding: 0; margin: 0;}
+img {position: absolute;}
+h3.optionheader { padding: 4px 0 4px; margin: 0;}
+
+#housebuilder {
+  background-image: url(../img/fullbasic.png);
+  margin: 14px auto 0px;
+  border: 4px solid #ccc;
+  height: 459px;
+  width: 800px;
+/* background-size: contain;*/
+}
+
+.selection {
+  float: left; 
+  padding-right: 10px;
+}
+
+#siding {
+    background-image: url('../img/white/siding.png');
+}
+#sidingalt {
+    background-image: url('../img/cobaltblue/siding.png') !important;
+}
+
+#wainscoting {
+    background-image: url('../img/white/wainscoting.png');
+}
+#wainscotingalt {
+    background-image: url('../img/cobaltblue/wainscoting.png') !important;
+}
+
+#roof {
+    background-image: url('../img/white/roof.png');
+}
+#roofalt {
+    background-image: url('../img/cobaltblue/roof.png') !important;
+}
+
+#trim {
+    background-image: url('../img/white/trim.png');
+}
+#trimalt {
+    background-image: url('../img/cobaltblue/trim.png') !important;
+}
+
+#soffits {
+    background-image: url('../img/white/soffits.png');
+}
+#soffitsalt {
+    background-image: url('../img/cobaltblue/soffits.png') !important;
+}
+
+#overhead {
+    background-image: url('../img/white/overheaddoor.png');
+}
+#overheadalt {
+    background-image: url('../img/cobaltblue/overheaddoor.png') !important;
+}
+
+#door {
+    background-image: url('../img/white/door.png');
+}
+#dooralt {
+    background-image: url('../img/cobaltblue/door.png') !important;
+}
+
+.house {
+    position: absolute;
+    height: 459px;
+    width: 800px;
+}
+
+#options {max-width: 894px; margin: 0 auto;}
+
+.basic {
+  
+}
+
+.blue {
+    -webkit-filter: hue-rotate(0deg); /* Chrome, Safari, Opera */
+}
+.green {
+    -webkit-filter: hue-rotate(260deg); /* Chrome, Safari, Opera */
+}
+.red {
+    -webkit-filter: hue-rotate(155deg); /* Chrome, Safari, Opera */
+}
+.black {
+    -webkit-filter: grayscale(100%);
+}
+.white {
+    background: #fff !important;
+    color: #333 !important;
+    border-color: #ccc !important;
+}
+
+
+.widget {
+    display: inline-block;
+    background-color: white;
+    font-size: 14px !important;
+    line-height: 20px !important;
+
+    margin: 5px;
+    vertical-align: top;
+    color: #333;
+
+    border-radius: 5px;
+    margin: 10px;
+    padding-bottom: 20px;
+    border: 1px solid lightgray;
+
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+
+    display: inline-block;
+    page-break-after: always;
+}
+
+@media (max-width: 840px) {
+    #housebuilder {
+      height: 230px;
+      width: 400px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src = "js/colorbuilder.js"></script>
+        
+	</head>
+    
+	<body>
+        <div ng-app="myApp" ng-controller="myCtrl" ng-init="test=0;">
+  
+          <div id="housebuilder">
+            <div id="siding{{sidingalt}}" class="house {{siding}}"></div>
+            <div id="wainscoting{{wainscotingalt}}" class="house {{wainscoting}}"></div>
+            <div id="roof{{roofalt}}" class="house {{roof}}"></div>
+            <div id="trim{{trimalt}}" class="house {{trim}}"></div>
+            <div id="soffits{{soffitsalt}}" class="house {{soffits}}"></div>
+            <div id="overhead{{overheadalt}}" class="house {{overhead}}"></div>
+            <div id="door{{dooralt}}" class="house {{door}}"></div>
+          </div>
+
+
+          <div id="options">
+            <form>
+
+              <!-- Siding -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Siding:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="siding" value="basic" ng-change="changeDefault('siding')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="siding" value="blue" ng-change="changeColor('siding')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="siding" value="green" ng-change="changeColor('siding')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="siding" value="red" ng-change="changeColor('siding')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="siding" value="black" ng-change="changeColor('siding')"> Black<br>
+                </label>
+              </div>
+                
+
+              <!-- Wainscoting -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Wainscoting:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="wainscoting" value="basic" ng-change="changeDefault('wainscoting')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="wainscoting" value="blue" ng-change="changeColor('wainscoting')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="wainscoting" value="green" ng-change="changeColor('wainscoting')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="wainscoting" value="red" ng-change="changeColor('wainscoting')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="wainscoting" value="black" ng-change="changeColor('wainscoting')"> Black<br>
+                </label>
+              </div>
+                
+              <!-- Roof -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Roof:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="roof" value="basic" ng-change="changeDefault('roof')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="roof" value="blue" ng-change="changeColor('roof')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="roof" value="green" ng-change="changeColor('roof')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="roof" value="red" ng-change="changeColor('roof')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="roof" value="black" ng-change="changeColor('roof')"> Black<br>
+                </label>
+              </div>
+                
+              <!-- Trim -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Trim:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="trim" value="basic" ng-change="changeDefault('trim')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="trim" value="blue" ng-change="changeColor('trim')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="trim" value="green" ng-change="changeColor('trim')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="trim" value="red" ng-change="changeColor('trim')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="trim" value="black" ng-change="changeColor('trim')"> Black<br>
+                </label>
+              </div>
+                
+              <!-- Soffits -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Soffits:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="soffits" value="basic" ng-change="changeDefault('soffits')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="soffits" value="blue" ng-change="changeColor('soffits')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="soffits" value="green" ng-change="changeColor('soffits')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="soffits" value="red" ng-change="changeColor('soffits')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="soffits" value="black" ng-change="changeColor('soffits')"> Black<br>
+                </label>
+              </div>
+
+              <!-- Overhead Door -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Overhead Door:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="overhead" value="basic" ng-change="changeDefault('overhead')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="overhead" value="blue" ng-change="changeColor('overhead')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="overhead" value="green" ng-change="changeColor('overhead')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="overhead" value="red" ng-change="changeColor('overhead')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="overhead" value="black" ng-change="changeColor('overhead')"> Black<br>
+                </label>
+              </div>
+                
+              <!-- Door -->
+              <div class="selection btn-group" data-toggle="buttons">
+                <h3 class="optionheader">Door:</h3>
+                <label class="white btn btn-primary active">
+                    <input type="radio" ng-model="door" value="basic" ng-change="changeDefault('door')"> Basic<br>
+                </label>
+                <label class="blue btn btn-primary active">
+                    <input type="radio" ng-model="door" value="blue" ng-change="changeColor('door')"> Blue<br>
+                </label>
+                <label class="green btn btn-primary active">
+                    <input type="radio" ng-model="door" value="green" ng-change="changeColor('door')"> Green<br>
+                </label>
+                <label class="red btn btn-primary active">
+                    <input type="radio" ng-model="door" value="red" ng-change="changeColor('door')"> Red<br>
+                </label>
+                <label class="black btn btn-primary active">
+                    <input type="radio" ng-model="door" value="black" ng-change="changeColor('door')"> Black<br>
+                </label>
+              </div>
+
+            </form> 
+          </div>
+
+        </div>  
+	</body>
+</html>

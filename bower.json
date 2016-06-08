@@ -1,0 +1,23 @@
+{
+  "name": "Color Builder App",
+  "authors": [
+    "Terry Scrimsher <terryscrimsher@gmail.com>"
+  ],
+  "description": "test",
+  "main": "Color Builder App",
+  "keywords": [
+    "Color selector application "
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4"
+  }
+}
